@@ -1,0 +1,44 @@
+// overall resets
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+// link resets
+a {
+  &:link,
+  &:hover,
+  &:visited
+   {
+    text-decoration: none;
+    outline: none;
+  }
+}
+
+.full-website {
+  transition: .3s all ease-out;
+  z-index: 1000;
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-size: cover;
+}
+

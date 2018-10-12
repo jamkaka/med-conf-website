@@ -1,0 +1,74 @@
+.container {
+  max-width: $container-width;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 5rem 0;
+  color: $section-text-color;
+  // centering text for heading centering.
+  text-align: center;
+  &__grid {
+    display: flex;
+    &--sponsors {
+      justify-content: space-around;
+    }
+  }
+  &__one-of-two-col {
+    flex: 0 0 50%;
+  }
+  &-about {
+    &__text {
+      &--paragraph {
+        margin: 0 2rem;
+        font-size: 2rem;
+        text-align: justify;
+      }
+    }
+  }
+  &-lectures {
+    background: linear-gradient(90deg, rgb(238, 238, 238) 0%, rgb(238, 238, 238) 35%,  rgba(203, 53, 107, 0.9) 35%, rgba(189, 63, 50, 0.9) 100%);
+  }
+  &-location {
+    &__text {
+      &--paragraph {
+        margin: 0 2rem;
+        font-size: 1.8rem;
+        text-align: justify; 
+      }
+      &--heading {
+        margin: 0 2rem;
+        text-transform: uppercase;
+        text-align: justify;
+        font-size: 2.8rem;
+        color: $section-heading-red-text-color;
+      }
+    }
+  }
+  // no need for section--location ruleset
+  &-sponsors {
+    &__text {
+      &--heading {
+        margin-bottom: 2rem;
+        text-align: center;
+        font-size: 2.2rem;
+        font-weight: 500;
+      }
+    }
+  }
+  &-join {
+    &__text {
+      &--paragraph {
+        margin-bottom: 1.5rem;
+        font-size: 2.4rem;
+        text-align: center;
+      }
+      &--heading {
+        margin-bottom: .2rem;
+        font-size: 4.5rem;
+        font-weight: 500;
+        text-align: center;
+      }
+    }
+  } 
+} 

@@ -1,0 +1,13 @@
+.is-lecture-selected {
+  &::after {
+    transform: translateX(-60%);
+  }
+}
+
+.is-responsive-menu-toggled {
+  transform: translateX(0%);
+}
+
+.is-responsive-menu-opened {
+  // background-color: #000;
+}

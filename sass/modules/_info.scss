@@ -1,0 +1,21 @@
+.info {
+  display: flex;
+  list-style-type: none;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  margin-top: 5rem;
+  &__item {
+    flex: 0 0 50%;
+  }
+  &__heading {
+    font-size: 4rem;
+    font-weight: 700;
+  }
+  &__text {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 4.5rem;
+    font-weight: 300;
+  }
+}

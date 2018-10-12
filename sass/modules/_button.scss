@@ -1,0 +1,84 @@
+%solid-shadow-effect {
+  &::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    top: .4rem;
+    left: .4rem;
+    background-color: rgba(239, 255, 233, 0.25);
+    transition: .3s all ease-out;
+  }
+  &:hover {
+    transform: translate(.4rem, .4rem);
+    &::after {
+    transform: translate(-.4rem, -.4rem);
+    }
+  }
+}
+
+.btn {
+  &--cta {
+    @extend %solid-shadow-effect;
+    display: inline-block;
+    align-self: center;
+    position: relative;
+    z-index: 1;
+    font-weight: 500;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    color: $cta-btn-text;
+    margin-top: 3rem;
+    padding: 1.5rem 4rem;
+    background-color: #fff;
+    transition: .3s all ease-out;
+    &__text {
+      @include inline-block-centered;
+    }
+  }
+  &--join {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 500;
+    padding: 1rem 6rem;
+    color: $color-red-3;
+    border: 4px solid $section-heading-red-text-color;
+    transition: .3s all ease-out;
+    // mozna jakims mixinem czy cos zalatwic, bo to samo w navigation.
+    &::after {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      top:100%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $section-heading-red-text-color;
+      transition: .3s all ease-out;
+    }
+    &:hover {
+      color: #fff;
+      &::after {
+        transform: translateY(-100%);
+      }
+    }
+  }
+  &--learn-more {
+    @extend %solid-shadow-effect;
+    display: inline-block;
+    position: relative;
+    margin-top: 3rem;
+    padding: 1rem 3.5rem;
+    background-color: #fff;
+    color: $color-red-3;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.5rem;
+    z-index: 1;
+    transition: .3s all ease-out;
+  }
+}

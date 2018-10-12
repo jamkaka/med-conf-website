@@ -1,0 +1,44 @@
+.lecture {
+  &-list {
+    list-style-type: none;
+  }
+  &-single {
+    padding: 1rem;
+    border: .3rem solid $color-grey-2;
+    text-align: left;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      height: 110%;
+      width: 20%;
+      top: -1%;
+      left: 100%;
+      background-color: $color-grey-2;
+      clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+      transition: .3s all ease-out;
+    }
+    &:hover::after {
+      transform: translateX(-60%);
+    }
+    &__heading {
+      display: inline-block;
+      font-size: 1.5rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      margin-right: .8rem;
+    }
+    &__subheading {
+      display: inline-block;
+      font-size: 1.1rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      color: rgba(21, 57, 53, 0.7);
+    }
+  }
+}

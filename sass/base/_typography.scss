@@ -1,0 +1,28 @@
+body {
+  font-family: "Rubik", sans-serif;
+}
+
+.heading {
+  text-transform: uppercase;
+  &-1 {
+    margin-top: .6rem;
+    font-weight: 700;
+    font-size: 8.2rem;
+    color: #fff;
+  }
+  &-2 {
+    margin-top: 8.5rem;
+    font-weight: 300;
+    font-size: 4.5rem;
+    color: #fff;
+  }
+  &-3 {
+    display: inline-block;
+    padding-bottom: .01rem;
+    font-weight: 700;
+    font-size: 3.5rem;
+    color: $section-heading-red-text-color;
+    border-bottom: .4rem solid $color-grey-1;
+    margin-bottom: 2rem;
+  }
+}
