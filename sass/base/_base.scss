@@ -11,6 +11,12 @@
 
 html {
   font-size: 62.5%;
+  @media screen and (max-width: 1200px) {
+    font-size: 50%;
+  }
+  @media screen and (max-width: 400px) {
+    font-size: 45%;
+  }
 }
 
 body {

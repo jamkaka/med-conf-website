@@ -8,6 +8,20 @@
   transform: translateX(0%);
 }
 
-.is-responsive-menu-opened {
+.has-responsive-menu-toggled {
   // background-color: #000;
+}
+
+.is-menu-hamburger-clicked {
+  & > *:first-child {
+    top: calc(50% - 3.5px);
+    transform: translateX(-50%) rotate(45deg);
+  }
+  & > *:nth-child(2) {
+    opacity: 0;
+  }
+  & > *:last-child {
+    top: calc(50% - 3.5px);
+    transform: translateX(-50%) rotate(-45deg);
+  }
 }

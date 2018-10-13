@@ -1,13 +1,15 @@
 // jump.js 
 // jump.js build using npm package 'lio' and embedded via <script> tags. module available via jumpJS function.
-const links = document.querySelectorAll('.link');
+import jump from 'jump.js'
 
-links.forEach(link => {
-  link.addEventListener('click', (e) => {
-    $('.responsive-menu').removeClass('is-responsive-menu-toggled');
-    jumpJs(`.section-${e.target.dataset.target}`)
-  })
-})
+const links = document.querySelectorAll('.link');
+links.forEach(link => link.addEventListener('click', smoothScroll));
+
+function smoothScroll(e) {
+  $('.responsive-menu').removeClass('is-responsive-menu-toggled');
+  $('.menu-hamburger').removeClass('is-menu-hamburger-clicked');
+  jump(`.section-${e.currentTarget.dataset.target}`);
+};
 
 // lectures section component.
 let activeLecture = $('#lecture-1');
@@ -31,14 +33,17 @@ function changeFocusedLecture(e) {
   }
 }
 
-// responsive menu.
-function toggleResponsiveMenu() {
-  $('body').toggleClass('is-responsive-menu-opened-body');
-  $('.full-website').toggleClass('is-responsive-menu-opened');
-  $('.responsive-menu').toggleClass('is-responsive-menu-toggled');
-}
-
 // particles.js
 particlesJS.load('particles-js', 'js/particles.json', function() {
   console.log('callback - particles.js config loaded');
 });
+
+// hamburger menu.
+document.querySelector('.menu-hamburger').addEventListener('click', toggleResponsiveMenu);
+
+function toggleResponsiveMenu() {
+  $('body').toggleClass('is-responsive-menu-opened-body');
+  $('.full-website').toggleClass('is-responsive-menu-opened');
+  $('.menu-hamburger').toggleClass('is-menu-hamburger-clicked');
+  $('.responsive-menu').toggleClass('is-responsive-menu-toggled');
+}

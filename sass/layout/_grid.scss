@@ -12,6 +12,12 @@
     display: flex;
     &--sponsors {
       justify-content: space-around;
+      @media screen and (max-width: 800px) {
+        align-items: center;
+      }
+    }
+    @media screen and (max-width: 800px) {
+      flex-direction: column;
     }
   }
   &__one-of-two-col {
@@ -28,6 +34,9 @@
   }
   &-lectures {
     background: linear-gradient(90deg, rgb(238, 238, 238) 0%, rgb(238, 238, 238) 35%,  rgba(203, 53, 107, 0.9) 35%, rgba(189, 63, 50, 0.9) 100%);
+    @media screen and (max-width: 800px) {
+      background: linear-gradient(to bottom, rgba(203, 53, 107, 0.9) 0%, rgba(189, 63, 50, 0.9) 100%);
+    }
   }
   &-location {
     &__text {
@@ -71,4 +80,4 @@
       }
     }
   } 
-} 
+}

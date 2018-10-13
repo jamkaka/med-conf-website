@@ -4,8 +4,11 @@
   "description": "website for wirusek.",
   "main": "index.html",
   "scripts": {
+    "clean": "rm -rf dist",
     "watch:sass": "node-sass sass/main.scss css/style.css -w",
-    "build:all": ""
+    "watch:js": "webpack --watch",
+    "build:js": "webpack --mode=production",
+    "build:all": "npm-run-all clean && webpack && build:css && build:js && mkdir -p {./dist,./dist/img,/dist/css,./js} && cp {./js/main.bundle.js,js/particles.json} ./dist/js && cp {./css/*.css} ./dist/css && cp ./img/*.svg ./dist/img && cp index.html ./dist"
   },
   "author": "jamkaka",
   "license": "ISC",
@@ -21,5 +24,7 @@
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "jump.js": "^1.0.2"
+  }
 }

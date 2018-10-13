@@ -2,11 +2,20 @@
   position: fixed;
   height: 100vh;
   overflow: hidden;
-  width: 40%;
+  width: 25%;
   background-color: #fff;
   z-index: 10;
   transform: translateX(-100%);
   transition: .3s all ease-out;
+  @media screen and (max-width: 1200px) {
+    width: 30%;
+  }
+  @media screen and (max-width: 800px) {
+    width: 40%;
+  }
+  @media screen and (max-width: 500px) {
+    width: 50%;
+  }
   &__list {
     list-style-type: none;
     margin-top: 5rem;

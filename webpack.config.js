@@ -3,18 +3,15 @@ const path = require('path');
 module.exports = {
   entry: {
     app: [
-      './src/js/app.js',
+      './js/main.js',
     ],
   },
   output: {
-    path: path.resolve(__dirname, 'build/js'),
-    filename: 'app.bundle.js',
+    path: path.resolve(__dirname, 'js'),
+    filename: 'main.bundle.js',
   },
   mode: 'development',
   devtool:'inline-source-map',
-  devServer: {
-    contentBase: './build'
-  },
   module: {
     rules: [
       {

@@ -5,9 +5,12 @@
     list-style-type: none;
   }
   &__item {
-    display: inline-block;
+    @include inline-block-centered;
     &:not(:last-child) {
       margin-right: 2.5rem;
+    }
+    @media screen and (max-width: 1100px) {
+      display: none;
     }
   }
   &__link {
