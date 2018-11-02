@@ -4,7 +4,7 @@
   }
   &-single {
     padding: 1rem;
-    border: .3rem solid $color-grey-2;
+    border: 2px solid $color-grey-2;
     text-align: left;
     cursor: pointer;
     position: relative;
@@ -17,8 +17,10 @@
       position: absolute;
       height: 110%;
       width: 20%;
-      top: -1%;
+      top: 0%;
       left: 100%;
+      margin-top: -1px;
+      transform: translateY(0);
       background-color: $color-grey-2;
       clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
       transition: .3s all ease-out;

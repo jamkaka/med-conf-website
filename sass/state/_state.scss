@@ -8,10 +8,6 @@
   transform: translateX(0%);
 }
 
-.has-responsive-menu-toggled {
-  // background-color: #000;
-}
-
 .is-menu-hamburger-clicked {
   & > *:first-child {
     top: calc(50% - 3.5px);

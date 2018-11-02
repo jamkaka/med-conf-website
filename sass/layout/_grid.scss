@@ -4,7 +4,11 @@
 }
 
 .section {
-  padding: 5rem 0;
+  // need to add additional padding for about, lectures and location sections.
+  &:first-of-type,&:nth-of-type(3),&:nth-of-type(4) {
+    padding-top: 5rem;
+  }
+  padding-bottom: 5rem;
   color: $section-text-color;
   // centering text for heading centering.
   text-align: center;

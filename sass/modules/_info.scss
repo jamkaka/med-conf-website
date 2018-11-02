@@ -4,18 +4,23 @@
   text-transform: uppercase;
   text-align: center;
   color: #fff;
-  margin-top: 5rem;
+  margin-top: 5em;
   &__item {
     flex: 0 0 50%;
   }
   &__heading {
-    font-size: 4rem;
+    font-size: 4em;
     font-weight: 700;
   }
   &__text {
     display: inline-block;
     vertical-align: middle;
-    font-size: 4.5rem;
+    font-size: 4.5em;
     font-weight: 300;
+  }
+  @media screen and (max-width: 550px) {
+    & {
+      flex-direction: column;
+    }
   }
 }

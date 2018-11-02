@@ -7,22 +7,45 @@ body {
   &-1 {
     margin-top: .6rem;
     font-weight: 700;
-    font-size: 8.2rem;
+    font-size: 8em;
     color: #fff;
   }
   &-2 {
-    margin-top: 8.5rem;
+    margin-top: 2em;
     font-weight: 300;
-    font-size: 4.5rem;
+    font-size: 4.5em;
     color: #fff;
   }
   &-3 {
     display: inline-block;
-    padding-bottom: .01rem;
+    padding-bottom: .1rem;
     font-weight: 700;
     font-size: 3.5rem;
     color: $section-heading-red-text-color;
     border-bottom: .4rem solid $color-grey-1;
     margin-bottom: 2rem;
+  }
+}
+
+// contorolling hero section font size.
+.header__layout {
+  font-size: 10px;
+  @media screen and (max-width: 1260px) {
+    font-size: 9px;
+  }
+  @media screen and (max-width: 1140px) {
+    font-size: 8px;
+  }
+  @media screen and (max-width: 1020px) {
+    font-size: 7px;
+  }
+  @media screen and (max-width: 900px) {
+    font-size: 6px;
+  }
+  @media screen and (max-width: 780px) {
+    font-size: 5px;
+  }
+  @media screen and (max-width: 650px) {
+    font-size: 4px;
   }
 }

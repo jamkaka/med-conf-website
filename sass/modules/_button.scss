@@ -26,10 +26,10 @@
     position: relative;
     z-index: 1;
     font-weight: 500;
-    font-size: 2.4rem;
+    font-size: 2.6em;
     text-transform: uppercase;
     color: $cta-btn-text;
-    margin-top: 3rem;
+    margin-top: 2em;
     padding: 1.5rem 4rem;
     background-color: #fff;
     transition: .3s all ease-out;
@@ -69,7 +69,8 @@
   }
   &--learn-more {
     @extend %solid-shadow-effect;
-    display: inline-block;
+    // display: inline-block;
+    align-self: center;
     position: relative;
     margin-top: 3rem;
     padding: 1rem 3.5rem;

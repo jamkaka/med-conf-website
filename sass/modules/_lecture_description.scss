@@ -9,6 +9,7 @@
   &:not(:first-child) {
     display: none;
   }
+  // this class is active when there is a button for learn more!
   & > *:not(:last-child) {
     width: 80%;
   }
@@ -29,6 +30,7 @@
   }
   &__paragraph {
     margin-top: 1.5rem;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+    font-weight: 300;
   }
 }

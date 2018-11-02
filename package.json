@@ -5,10 +5,12 @@
   "main": "index.html",
   "scripts": {
     "clean": "rm -rf dist",
+    "create:dist": "rm -rf ./dist && mkdirp ./dist/img ./dist/css ./dist/js && cp {./js/main.bundle.js,./js/particles.json} ./dist/js && cp ./css/*.css ./dist/css && cp ./img/*.svg ./dist/img && cp index.html ./dist",
     "watch:sass": "node-sass sass/main.scss css/style.css -w",
     "watch:js": "webpack --watch",
+    "build:css": "node-sass sass/main.scss css/style.css",
     "build:js": "webpack --mode=production",
-    "build:all": "npm-run-all clean && webpack && build:css && build:js && mkdir -p {./dist,./dist/img,/dist/css,./js} && cp {./js/main.bundle.js,js/particles.json} ./dist/js && cp {./css/*.css} ./dist/css && cp ./img/*.svg ./dist/img && cp index.html ./dist"
+    "build:all": "npm-run-all build:css build:js create:dist"
   },
   "author": "jamkaka",
   "license": "ISC",
@@ -18,6 +20,7 @@
     "autoprefixer": "^9.1.5",
     "babel-loader": "^8.0.4",
     "concat": "^1.0.3",
+    "mkdirp": "^0.5.1",
     "node-sass": "^4.9.3",
     "npm-run-all": "^4.1.3",
     "postcss-cli": "^6.0.0",
