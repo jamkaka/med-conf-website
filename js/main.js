@@ -14,21 +14,24 @@ function smoothScroll(e) {
 let activeLecture = $('#lecture-1');
 const lectures = $('.lecture-single')
 
-lectures.each((id, lecture) => $(lecture).on('click', changeFocusedLecture));
+$('.lecture-list').on('click', changeFocusedLecture)
 
 function changeFocusedLecture(e) {
-  const clickedLecture = $(`#lecture-${e.target.id}`);
-  // prevent key mashing.
-  if (activeLecture.is(':animated')) return;
-  if(!clickedLecture.is(activeLecture)) {
-    // add class to show which lecture is selected.
-    lectures.each((id, lecture) => $(lecture).removeClass('is-lecture-selected'));
-    $(e.target).addClass('is-lecture-selected');
-    // animation part.
-    activeLecture.fadeOut("slow",() => {
-      clickedLecture.fadeIn("slow").css({'display':'flex'});
-      activeLecture=clickedLecture;
-    });
+  if ($(e.target).hasClass('lecture-single')) {
+    const clickedLecture = $(`#lecture-${e.target.id}`);
+    // prevent key mashing.
+    if (activeLecture.is(':animated')) return;
+    if(!clickedLecture.is(activeLecture)) {
+      // add class to show which lecture is selected.
+      lectures.each((id, lecture) => $(lecture).removeClass('is-lecture-selected'));
+      activeLecture.removeClass('is-lecture-selected');
+      $(e.target).addClass('is-lecture-selected');
+      // animation part.
+      activeLecture.fadeOut("slow", function() {
+        clickedLecture.fadeIn("slow").css({'display':'flex'});
+        activeLecture=clickedLecture;
+      });
+    }
   }
 }
 

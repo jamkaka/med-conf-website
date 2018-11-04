@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "clean": "rm -rf dist",
-    "create:dist": "rm -rf ./dist && mkdirp ./dist/img ./dist/css ./dist/js && cp {./js/main.bundle.js,./js/particles.json} ./dist/js && cp ./css/*.css ./dist/css && cp ./img/*.svg ./dist/img && cp index.html ./dist",
+    "create:dist": "rm -rf ./dist && mkdirp ./dist/img ./dist/css ./dist/js && cp {./js/main.bundle.js,./js/particles.json} ./dist/js && cp ./css/*.css ./dist/css && cp ./img/*.{svg,png,jpg} ./dist/img && cp index.html ./dist",
     "watch:sass": "node-sass sass/main.scss css/style.css -w",
     "watch:js": "webpack --watch",
     "build:css": "node-sass sass/main.scss css/style.css",

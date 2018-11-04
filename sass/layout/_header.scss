@@ -1,6 +1,6 @@
 .header {
   position: relative;
-  padding: 2rem 4rem 10rem 4rem;
+  padding: 3vw 4vw 6vw 4vw;
   background: linear-gradient(62.91deg, rgba(203, 53, 107, 0.9) 5.86%, rgba(189, 63, 50, 0.9) 115.66%);
   &__layout {
     display: flex;
@@ -8,10 +8,5 @@
     margin: 0 auto;
     max-width: $container-width;
     text-align: center;
-  }
-  @media screen and (max-width:650px) {
-    & {
-      padding: 1rem 2rem 6rem 2rem;
-    }
   }
 }
