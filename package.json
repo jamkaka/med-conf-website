@@ -1,7 +1,7 @@
 {
-  "name": "wirusek-website",
+  "name": "med-conference-website",
   "version": "1.0.0",
-  "description": "website for wirusek.",
+  "description": "website for med conference.",
   "main": "index.html",
   "scripts": {
     "clean": "rm -rf dist",
