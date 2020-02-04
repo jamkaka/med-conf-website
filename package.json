@@ -26,8 +26,5 @@
     "postcss-cli": "^6.0.0",
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.2"
-  },
-  "dependencies": {
-    "jump.js": "^1.0.2"
   }
 }
